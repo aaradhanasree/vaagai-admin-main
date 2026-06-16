@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaagai Foundation - Empowering Communities</title>
+    <link rel="icon" type="image/png" href="img/Screenshot 2025-11-29 133504.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-img">
+                        <img src="img/Screenshot 2025-11-29 133504.png" alt="Vaagai Foundation Logo">
+                    </div>
+                    <h1>Vaagai <span>Foundation</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" data-en="Home" data-ta="முகப்பு"><i class=""></i> <span>Home</span></a></li>
+                    <li><a href="#about" data-en="About" data-ta="எங்களைப் பற்றி"><i class=""></i> <span>About</span></a></li>
+                    <li><a href="#programs" data-en="Programs" data-ta="திட்டங்கள்"><i class=""></i> <span>Programs</span></a></li>
+                    <li><a href="#impact" data-en="Impact" data-ta="தாக்கம்"><i class=""></i> <span>Impact</span></a></li>
+                    <li><a href="#gallery" data-en="Gallery" data-ta="கேலரி"><i class=""></i> <span>Gallery</span></a></li>
+                    <li><a href="#contact" data-en="Contact" data-ta="தொடர்பு கொள்ள"><i class=""></i> <span>Contact</span></a></li>
+                    <li class="language-toggle" id="languageToggle">
+                        <i class="fas fa-globe"></i>
+                        <span data-en="Tamil" data-ta="English">Tamil</span>
+                    </li>
+                    <li><a href="#" class="donate-btn" data-en="Donate" data-ta="நன்கொடை"><i class="fas fa-heart"></i> <span>Donate</span></a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-bg-slideshow" id="heroBgSlideshow"></div>
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-en="Empowering Communities, Transforming Lives" data-ta="சமூகங்களை மேம்படுத்துதல், வாழ்க்கையை மாற்றுதல்">Empowering Communities, Transforming Lives</h1>
+                <p data-en="Vaagai Foundation is dedicated to creating sustainable change through education, healthcare, and community development initiatives." data-ta="வாகை அறக்கட்டளை கல்வி, சுகாதாரம் மற்றும் சமூக மேம்பாட்டு முயற்சிகள் மூலம் நிலையான மாற்றத்தை உருவாக்குவதற்காக அர்ப்பணிக்கப்பட்டுள்ளது.">Vaagai Foundation is dedicated to creating sustainable change through education, healthcare, and community development initiatives.</p>
+                <div class="hero-btns">
+                    <a href="#programs" class="btn" data-en="Our Programs" data-ta="எங்கள் திட்டங்கள்">Our Programs</a>
+                    <a href="#contact" class="btn btn-secondary" data-en="Get Involved" data-ta="பங்கேற்க">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="tamil-banner">
+        <div class="tamil-text-container">
+            <div class="tamil-text">வாழ்க்கையை மாற்றும் சமூகங்களை மேம்படுத்துதல் - வாகை அறக்கட்டளை</div>
+            <div class="tamil-text">கல்வி, சுகாதாரம் மற்றும் சமூக மேம்பாட்டு முயற்சிகள் மூலம் நிலையான மாற்றத்தை உருவாக்குதல்</div>
+            <div class="tamil-text">வாழ்க்கையை மாற்றும் சமூகங்களை மேம்படுத்துதல் - வாகை அறக்கட்டளை</div>
+            <div class="tamil-text">கல்வி, சுகாதாரம் மற்றும் சமூக மேம்பாட்டு முயற்சிகள் மூலம் நிலையான மாற்றத்தை உருவாக்குதல்</div>
+        </div>
+    </div>
+
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="About Us" data-ta="எங்களைப் பற்றி">About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="img/7.jpg" alt="Vaagai Foundation Team">
+                </div>
+                <div class="about-text">
+                    <h3 data-en="Our Mission & Vision" data-ta="எங்கள் நோக்கம் & பார்வை">Our Mission & Vision</h3>
+                    <p data-en="Vaagai Foundation (Reference: 8LOPC01) was established with the vision of creating a society where every individual has access to basic necessities, quality education, and healthcare facilities. We believe in empowering communities to become self-reliant and sustainable." data-ta="வாகை அறக்கட்டளை (குறிப்பு: 8LOPC01) ஒவ்வொரு தனிநபருக்கும் அடிப்படைத் தேவைகள், தரமான கல்வி மற்றும் சுகாதார வசதிகள் உள்ள சமூகத்தை உருவாக்கும் பார்வையுடன் நிறுவப்பட்டது. சமூகங்கள் சுயநம்பிக்கை மற்றும் நிலையானதாக மாறுவதை நாங்கள் நம்புகிறோம்.">Vaagai Foundation (Reference: 8LOPC01) was established with the vision of creating a society where every individual has access to basic necessities, quality education, and healthcare facilities. We believe in empowering communities to become self-reliant and sustainable.</p>
+                    <p data-en="Our mission is to implement innovative solutions to address social challenges, with a focus on education, healthcare, environmental sustainability, and women empowerment." data-ta="கல்வி, சுகாதாரம், சுற்றுச்சூழல் நிலைத்தன்மை மற்றும் பெண்கள் மேம்பாடு ஆகியவற்றில் கவனம் செலுத்தி, சமூக சவால்களைத் தீர்க்க புதுமையான தீர்வுகளை செயல்படுத்துவதே எங்கள் பணி.">Our mission is to implement innovative solutions to address social challenges, with a focus on education, healthcare, environmental sustainability, and women empowerment.</p>
+                    <p data-en="Since our inception, we have impacted thousands of lives through our various initiatives across multiple regions." data-ta="நிறுவப்பட்டதிலிருந்து, பல்வேறு பகுதிகளில் எங்கள் பல்வேறு முயற்சிகள் மூலம் ஆயிரக்கணக்கான வாழ்க்கைகளை பாதித்துள்ளோம்.">Since our inception, we have impacted thousands of lives through our various initiatives across multiple regions.</p>
+                    <a href="#" class="btn" data-en="Learn More" data-ta="மேலும் அறிக">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section programs" id="programs">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Our Programs" data-ta="எங்கள் திட்டங்கள்">Our Programs</h2>
+            </div>
+            
+            <div class="program-categories">
+                <button class="category-btn active" data-category="all" data-en="All Programs" data-ta="அனைத்து திட்டங்கள்">All Programs</button>
+                <button class="category-btn" data-category="education" data-en="Education" data-ta="கல்வி">Education</button>
+                <button class="category-btn" data-category="employment" data-en="Employment" data-ta="தொழில்">Employment</button>
+                <button class="category-btn" data-category="health" data-en="Health & Wellness" data-ta="சுகாதாரம்">Health & Wellness</button>
+                <button class="category-btn" data-category="environment" data-en="Environment" data-ta="சுற்றுச்சூழல்">Environment</button>
+            </div>
+            
+            <div class="programs-grid" id="dynamicProgramsGrid">
+                <!-- Programs loaded dynamically from API -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section impact" id="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Our Impact" data-ta="எங்கள் தாக்கம்">Our Impact</h2>
+            </div>
+            <div class="impact-stats">
+                <div class="stat">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>300+</h3>
+                    <p data-en="Children Educated" data-ta="குழந்தைகள் கல்வி கற்றனர்">Children Educated</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>150+</h3>
+                    <p data-en="Exam Preparations" data-ta="தேர்வு தயாரிப்புகள்">Exam Preparations</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-female"></i>
+                    <h3>50+</h3>
+                    <p data-en="Women Empowered" data-ta="பெண்கள் மேம்படுத்தப்பட்டனர்">Women Empowered</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-tree"></i>
+                    <h3>500+</h3>
+                    <p data-en="Trees Planted" data-ta="மரங்கள் நடப்பட்டன">Trees Planted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section announcements" id="announcements">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Upcoming Events" data-ta="வரவிருக்கும் நிகழ்வுகள்">Upcoming Events</h2>
+            </div>
+            <div class="announcements-container" id="upcomingEventsContainer">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section announcements" id="past-events">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Past Events" data-ta="முந்தைய நிகழ்வுகள்">Past Events</h2>
+            </div>
+            <div class="announcements-container" id="pastEventsContainer">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Our Gallery" data-ta="எங்கள் கேலரி">Our Gallery</h2>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-track">
+                    <div class="gallery-slide active">
+                        <img src="img/1.jpg" alt="Community Service">
+                        <div class="gallery-content">
+                            <h3 data-en="Community Outreach" data-ta="சமூக வெளிப்பாடு">Community Outreach</h3>
+                            <p data-en="Our volunteers engaging with local communities to understand their needs and provide support." data-ta="உள்ளூர் சமூகங்களின் தேவைகளைப் புரிந்துகொண்டு ஆதரவை வழங்க எங்கள் தன்னார்வலர்கள் ஈடுபடுகின்றனர்.">Our volunteers engaging with local communities to understand their needs and provide support.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img/2.jpg" alt="Education Program">
+                        <div class="gallery-content">
+                            <h3 data-en="Education Initiatives" data-ta="கல்வி முன்னெடுப்புகள்">Education Initiatives</h3>
+                            <p data-en="Children participating in our after-school learning programs and educational activities." data-ta="எங்கள் பள்ளி நேரத்திற்குப் பின் கற்றல் திட்டங்கள் மற்றும் கல்வி நடவடிக்கைகளில் குழந்தைகள் பங்கேற்கின்றனர்.">Children participating in our after-school learning programs and educational activities.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img/3.jpg" alt="Healthcare Camp">
+                        <div class="gallery-content">
+                            <h3 data-en="Healthcare Camps" data-ta="சுகாதார முகாம்கள்">Healthcare Camps</h3>
+                            <p data-en="Medical professionals providing free health checkups and consultations in rural areas." data-ta="கிராமப்புறங்களில் இலவச சுகாதார பரிசோதனைகள் மற்றும் ஆலோசனைகளை மருத்துவ வல்லுநர்கள் வழங்குகின்றனர்.">Medical professionals providing free health checkups and consultations in rural areas.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img/4.jpg" alt="Women Empowerment">
+                        <div class="gallery-content">
+                            <h3 data-en="Women Empowerment" data-ta="பெண்கள் மேம்பாடு">Women Empowerment</h3>
+                            <p data-en="Skill development workshops helping women gain financial independence and confidence." data-ta="திறன் மேம்பாட்டு பட்டறைகள் பெண்கள் நிதி சுதந்திரம் மற்றும் நம்பிக்கையைப் பெற உதவுகின்றன.">Skill development workshops helping women gain financial independence and confidence.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img/5.jpg" alt="Environmental Initiatives">
+                        <div class="gallery-content">
+                            <h3 data-en="Environmental Sustainability" data-ta="சுற்றுச்சூழல் நிலைத்தன்மை">Environmental Sustainability</h3>
+                            <p data-en="Our tree planting initiatives and environmental awareness campaigns." data-ta="எங்கள் மரம் நடும் முயற்சிகள் மற்றும் சுற்றுச்சூழல் விழிப்புணர்வு பிரச்சாரங்கள்.">Our tree planting initiatives and environmental awareness campaigns.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img/8.jpg" alt="Rural Development">
+                        <div class="gallery-content">
+                            <h3 data-en="Rural Development" data-ta="கிராமப்புற மேம்பாடு">Rural Development</h3>
+                            <p data-en="Infrastructure development projects in rural communities." data-ta="கிராமப்புற சமூகங்களில் உள்கட்டமைப்பு மேம்பாட்டு திட்டங்கள்.">Infrastructure development projects in rural communities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-controls">
+                    <div class="gallery-control prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="gallery-control next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-nav">
+                    <div class="gallery-dot active"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                </div>
+            </div>
+            
+            <div class="floating-gallery" id="dynamicFloatingGallery">
+                <!-- Gallery images loaded dynamically from API -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Contact Us" data-ta="தொடர்பு கொள்ள">Contact Us</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-en="Get In Touch" data-ta="தொடர்பில் இருங்கள்">Get In Touch</h3>
+                    <p data-en="We would love to hear from you. Reach out to us for collaborations, volunteering opportunities, or any queries." data-ta="உங்களிடமிருந்து கேட்பதில் நாங்கள் மகிழ்ச்சியடைவோம். ஒத்துழைப்புகள், தன்னார்வ வாய்ப்புகள் அல்லது எந்தவொரு கேள்விகளுக்கும் எங்களைத் தொடர்பு கொள்ளுங்கள்.">We would love to hear from you. Reach out to us for collaborations, volunteering opportunities, or any queries.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-en="Address" data-ta="முகவரி">Address</h4>
+                            <p>Erthangal Village , Gudiyattam , Tamilnadu</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-en="Phone" data-ta="தொலைபேசி">Phone</h4>
+                            <p>+91 95143 57439</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-en="Email" data-ta="மின்னஞ்சல்">Email</h4>
+                            <p>vaagaifoundation@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required data-en="Your Name" data-ta="உங்கள் பெயர்">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required data-en="Your Email" data-ta="உங்கள் மின்னஞ்சல்">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" data-en="Subject" data-ta="விஷயம்">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-control" placeholder="Your Message" required data-en="Your Message" data-ta="உங்கள் செய்தி"></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-en="Send Message" data-ta="செய்தியை அனுப்பு">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Vaagai Foundation</h3>
+                    <p data-en="Empowering communities through education, healthcare, and sustainable development initiatives." data-ta="கல்வி, சுகாதாரம் மற்றும் நிலையான மேம்பாட்டு முயற்சிகள் மூலம் சமூகங்களை மேம்படுத்துதல்.">Empowering communities through education, healthcare, and sustainable development initiatives.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 data-en="Quick Links" data-ta="விரைவு இணைப்புகள்">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-en="Home" data-ta="முகப்பு">Home</a></li>
+                        <li><a href="#about" data-en="About Us" data-ta="எங்களைப் பற்றி">About Us</a></li>
+                        <li><a href="#programs" data-en="Programs" data-ta="திட்டங்கள்">Programs</a></li>
+                        <li><a href="#impact" data-en="Impact" data-ta="தாக்கம்">Impact</a></li>
+                        <li><a href="#gallery" data-en="Gallery" data-ta="கேலரி">Gallery</a></li>
+                        <li><a href="#contact" data-en="Contact" data-ta="தொடர்பு கொள்ள">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-en="Our Programs" data-ta="எங்கள் திட்டங்கள்">Our Programs</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-en="Education for All" data-ta="அனைவருக்கும் கல்வி">Education for All</a></li>
+                        <li><a href="#" data-en="Government Exam Preparations" data-ta="அரசு தேர்வு தயாரிப்புகள்">Government Exam Preparations</a></li>
+                        <li><a href="#" data-en="Planting Trees" data-ta="மரங்கள் நடுதல்">Planting Trees</a></li>
+                        <li><a href="#" data-en="Yoga Classes" data-ta="யோகா வகுப்புகள்">Yoga Classes</a></li>
+                        <li><a href="#" data-en="Sports Events" data-ta="விளையாட்டு நிகழ்வுகள்">Sports Events</a></li>
+                        <li><a href="#" data-en="Marathon Events" data-ta="மாரத்தான் நிகழ்வுகள்">Marathon Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-en="Newsletter" data-ta="செய்திமடல்">Newsletter</h3>
+                    <p data-en="Subscribe to our newsletter to get updates on our programs and events." data-ta="எங்கள் திட்டங்கள் மற்றும் நிகழ்வுகள் பற்றிய புதுப்பிப்புகளைப் பெற எங்கள் செய்திமடலுக்கு குழுசேரவும்.">Subscribe to our newsletter to get updates on our programs and events.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required data-en="Your Email" data-ta="உங்கள் மின்னஞ்சல்">
+                        </div>
+                        <button type="submit" class="btn" data-en="Subscribe" data-ta="குழுசேர்">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Vaagai Foundation. All Rights Reserved.
+                    <br> <span data-en="developed by Volunteer with Love" data-ta="அன்புடன் தன்னார்வலரால் உருவாக்கப்பட்டது">developed by Volunteer with Love</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+        <script src="script.js"></script>
+</body>
+</html>

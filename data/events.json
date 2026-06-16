@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Sports Event",
+    "date": "2026-04-14",
+    "image": "img/event-14Apr2026.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Past Event Highlights",
+    "date": "2026-01-26",
+    "image": "img/event-poster-2026.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Father's Day",
+    "date": "2026-06-16",
+    "image": "img/1781605036494-Exide_Invamaster_IMTT1500_150Ah_Battery.png"
+  }
+]

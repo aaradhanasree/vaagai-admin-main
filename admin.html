@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - Vaagai Foundation</title>
+    <link rel="icon" type="image/png" href="img/Screenshot 2025-11-29 133504.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-card">
+            <div class="login-header">
+                <img src="img/Screenshot 2025-11-29 133504.png" alt="Logo" class="login-logo">
+                <h1>Vaagai Foundation</h1>
+                <p>Admin Portal</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginPassword"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter admin password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                <p id="loginError" class="error-msg"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="dashboard" style="display:none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/Screenshot 2025-11-29 133504.png" alt="Logo" class="sidebar-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="programs">
+                    <i class="fas fa-project-diagram"></i> Programs
+                </a>
+                <a href="#" class="nav-item" data-section="gallery">
+                    <i class="fas fa-images"></i> Gallery
+                </a>
+                <a href="#" class="nav-item" data-section="events">
+                    <i class="fas fa-calendar-alt"></i> Events
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="/" class="nav-item" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> View Site
+                </a>
+                <a href="#" class="nav-item" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Programs Section -->
+            <section id="programsSection" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-project-diagram"></i> Manage Programs</h2>
+                    <button class="btn btn-primary" id="addProgramBtn">
+                        <i class="fas fa-plus"></i> Add Program
+                    </button>
+                </div>
+                <div id="programsList" class="cards-grid"></div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="gallerySection" class="content-section" style="display:none;">
+                <div class="section-header">
+                    <h2><i class="fas fa-images"></i> Manage Gallery</h2>
+                    <button class="btn btn-primary" id="addGalleryBtn">
+                        <i class="fas fa-plus"></i> Add Images
+                    </button>
+                </div>
+                <div id="galleryList" class="gallery-grid"></div>
+            </section>
+
+            <!-- Events Section -->
+            <section id="eventsSection" class="content-section" style="display:none;">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> Manage Events</h2>
+                    <button class="btn btn-primary" id="addEventBtn">
+                        <i class="fas fa-plus"></i> Add Event
+                    </button>
+                </div>
+                <div class="events-tabs">
+                    <button class="events-tab active" data-tab="upcoming">Upcoming Events</button>
+                    <button class="events-tab" data-tab="past">Past Events</button>
+                </div>
+                <div id="eventsList" class="cards-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Program Modal -->
+    <div id="programModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="programModalTitle">Add Program</h3>
+                <button class="modal-close" id="closeProgramModal">&times;</button>
+            </div>
+            <form id="programForm">
+                <input type="hidden" id="programId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Title (English) *</label>
+                        <input type="text" id="programTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Title (Tamil)</label>
+                        <input type="text" id="programTitleTa">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description (English) *</label>
+                    <textarea id="programDesc" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Description (Tamil)</label>
+                    <textarea id="programDescTa" rows="3"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category *</label>
+                        <select id="programCategory" required>
+                            <option value="">Select category</option>
+                            <option value="education">Education</option>
+                            <option value="employment">Employment</option>
+                            <option value="health">Health & Wellness</option>
+                            <option value="environment">Environment</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Program Image</label>
+                        <input type="file" id="programImage" accept="image/*">
+                        <img id="programImagePreview" class="image-preview" style="display:none;">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancelProgramModal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Save Program
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Upload Modal -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <h3>Upload Gallery Images</h3>
+                <button class="modal-close" id="closeGalleryModal">&times;</button>
+            </div>
+            <form id="galleryForm">
+                <div class="form-group">
+                    <label>Select Images</label>
+                    <div class="file-drop-zone" id="fileDropZone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop images or click to browse</p>
+                        <input type="file" id="galleryImages" accept="image/*" multiple>
+                    </div>
+                    <div id="uploadPreviewList" class="upload-preview-list"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancelGalleryModal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-upload"></i> Upload
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Event Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <h3 id="eventModalTitle">Add Event</h3>
+                <button class="modal-close" id="closeEventModal">&times;</button>
+            </div>
+            <form id="eventForm">
+                <input type="hidden" id="eventId">
+                <div class="form-group">
+                    <label>Event Title *</label>
+                    <input type="text" id="eventTitle" required placeholder="e.g. Annual Sports Day">
+                </div>
+                <div class="form-group">
+                    <label>Event Date *</label>
+                    <input type="date" id="eventDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Event Poster *</label>
+                    <input type="file" id="eventImage" accept="image/*">
+                    <img id="eventImagePreview" class="image-preview" style="display:none;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancelEventModal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Save Event
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
