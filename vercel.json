@@ -4,6 +4,14 @@
     { "src": "api/index.js", "use": "@vercel/node" }
   ],
   "routes": [
+    { "src": "^/styles\\.css$", "dest": "/styles.css", "headers": { "Cache-Control": "public, max-age=3600", "Content-Type": "text/css" } },
+    { "src": "^/script\\.js$", "dest": "/script.js", "headers": { "Cache-Control": "public, max-age=3600", "Content-Type": "application/javascript" } },
+    { "src": "^/admin\\.js$", "dest": "/admin.js", "headers": { "Cache-Control": "public, max-age=3600", "Content-Type": "application/javascript" } },
+    { "src": "^/admin\\.css$", "dest": "/admin.css", "headers": { "Cache-Control": "public, max-age=3600", "Content-Type": "text/css" } },
+    { "src": "^/admin\\.html$", "dest": "/admin.html", "headers": { "Content-Type": "text/html" } },
+    { "src": "^/img/(.*)$", "dest": "/img/$1" },
+    { "src": "^/data/(.*)$", "dest": "/data/$1" },
+    { "src": "^/api", "dest": "/api/index.js" },
     { "src": "/(.*)", "dest": "/api/index.js" }
   ]
 }
