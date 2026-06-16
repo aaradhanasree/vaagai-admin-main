@@ -17,7 +17,11 @@ const JWT_SECRET = process.env.JWT_SECRET || 'vaagai-admin-secret-change-in-prod
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('.'));
+app.use(express.static(path.join(__dirname, '.')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // --- File paths ---
 const DATA_DIR = path.join(__dirname, 'data');
